@@ -1,0 +1,126 @@
+p{
+    padding-left: 2.2%;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    margin-top: -8px;
+}
+body{
+    background-color: rgb(233, 237, 240);
+}
+._header{
+    padding-top: 11.8%;
+    padding-left: 13.65%;
+}
+#email{
+    width: 364;
+    height: 52;
+    border: 1;
+    padding: 14 16;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16.7px;
+}
+._box{
+    margin-left: 18;
+    font-size: 20px;
+    padding: 6px 0;
+    width: 302px;
+    border: 1;
+}
+._log{
+    width: 362;
+    height: 50;
+    padding: 0 16;
+    border: none;
+    line-height: 48px;
+    border-radius: 6px;
+    font-size: 20px;
+    background-color: #1877f2;
+    display: inline-block;
+    color: #fff;
+    border-color: #4267b2;
+}
+._input{
+    padding-top: 6;
+    display: block;
+    border: none;
+}
+._forget{
+    margin-top: 16px;
+    width: 396;
+    height: 18;
+    
+    
+}
+._line{
+    width: 364;
+    margin: 20 16;
+    align-items: center;
+    border-bottom: 1px solid #dadde1;
+    display: flex;
+    margin: 20px 16px;
+    text-align: center;
+}
+._create_box{
+    padding: 0 16;
+    width: 201;
+    height: 48;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 6px;
+}
+._create{
+    padding-top: 6px;
+    width: 396;
+    height: 48;
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    
+}
+._form{
+    width: 396;
+    height: 315;
+}
+._fixbody{
+    align-items: center;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+    margin: 40px 0 0;
+    padding: 20px 0 28px;
+    width: 396px;
+    padding: 10 0 24 0;
+    text-align: center;
+}
+._sec_link{
+    font-family: SFProText-Semibold, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: inherit;
+    text-decoration: none;
+}
+._under_text{
+    margin-top: 28;
+    text-align: center;
+}
+._prebody{
+    width: 396;
+    height: 456;
+    margin-left: 802;
+    margin-top: -278;
+}
+#_link_f{
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+#_link_s{
+    text-decoration: none;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    
+}

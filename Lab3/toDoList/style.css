@@ -60,7 +60,7 @@ div[class$="chek"]{
     height: 50px;
     margin-left: 440px;
 }
-.Tags{
+p[class$="Tags"]{
     padding-left:84px;
 }
 .del{
@@ -71,4 +71,9 @@ div[class$="chek"]{
     position: fixed;
     
     
+}
+
+p[class$="NewClass"]{
+    text-decoration: line-through;
+    padding-left:84px;
 }

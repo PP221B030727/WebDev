@@ -93,18 +93,71 @@ function createList(last){
     var newDiv = document.createElement("div"); // создаем новый элемент div
     newDiv.className = cnt+"chek";
     cnt++;
-    var save = '<input id = "bx" type="checkbox"><p class = "Tags" >'+last+'</p><button onclick = "deleteById(this)" class = "del"></button>';
+    var save = '<input id = "bx" onclick = "overLine(this)" type="checkbox"><p class = "Tags" >'+last+'</p><button onclick = "deleteById(this)" class = "del"></button>';
     newDiv.innerHTML = save; // задаем содержимое элемента
     document.body.appendChild(newDiv); // добавляем новый элемент в тело документа
 }
 
 function deleteById(el){
     const parent = el.parentNode;
+    // parent.appendChild('')
+
+    
+    // psave.appendChild('')
     parent.remove();
 
 }
 
+function overLine(el){
+    const parent = el.parentNode;
+    const p = parent.querySelector("p");
+    const node = document.createElement("li");
+    const textnode = document.createTextNode("Water");
+    // console.log(p.className);
+    // p.toggle('NewClass');
+    if(p.className=="NewClass"){
+        p.className = 'Tags';
+    }
+    else{
+        p.className = 'NewClass';
+    }
+    
+    // p.remove();
+    // p.appendChild(textnode);
+    // p.remove.textnode();
+    
+    
+    // p.appendChild();
+    // p.appendChild(p);
+    // p.appendChild('psp');
+    // p.addEventListener('click', function() {
+    //     p.remove();
+    //     // chek.classList.toggle('class');
+    // });
+    
+    // parent.remove();
+    // var psave = parent.innerHTML;
+    // console.log(psave[0]);
+    // console.log("hello");
+    
+    // if(div.style.display == "none"){
+    //     div.style.display == ""
+    // }
+    // else{
+    //     div.style.display == "none"
+    // }
+    
+}
+// let ch = document.querySelector(".checkbox")
+// ch.addEventListener("click", overLine)
 
+// let cheks = document.querySelectorAll('.chek');
+// cheks.forEach((chek) => {
+//     const button = chek.querySelector('.checkbox');
+//     button.addEventListener('click', function() {
+//         chek.classList.toggle('class');
+//     });
+// });
 // var arr = []
 // var cnt = 0;
 // function buttiCnt(el){

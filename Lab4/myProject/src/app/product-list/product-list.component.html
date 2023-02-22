@@ -10,9 +10,9 @@
         <p *ngIf="product.description">
             Description : {{product.description}}
         </p>
-        <button type="button" (click)="share()">
-            Share
-        </button>
+        <a href="https://web.telegram.org/z/">
+            <button  type="button" (click)="share()">Share</button>
+        </a>
         <app-product-alerts [product]="product" (notify)="onNotify()">
         </app-product-alerts>
     </div>

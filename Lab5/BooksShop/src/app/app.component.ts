@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    
+    selector : 'app-root',//Имя компонента который мы передаем в главный html code
+    templateUrl : 'app.component.html',//путь html 
+    styleUrls : ['app.component.scss'],//путь scss
+
+        
 })
-export class AppComponent {
-  title = 'BooksShop';
-}
+
+//Названия компонента его мы передаем в app.module 
+export class  AppComponent{}

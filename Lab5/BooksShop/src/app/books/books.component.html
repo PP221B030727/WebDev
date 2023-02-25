@@ -1,12 +1,26 @@
 <h2>Programing Book List!</h2>
-<!-- Interpolation example -->
+<!-- why we use Property Binding  -->
+<button [disabled] = "isShowing">Show Books</button>
+<!-- Все иделаьно работает  -->
+<!-- Лучше использовать proporty Binding где это возможно  -->
+ 
+
+<button disabled = "{{isShowing}}">Show Books</button>
+<!-- Так не работает потому что в этом случае он вопринимает это как строку  -->
+
+<!-- не всегда работает -->
+
+
+
+
+<!-- Property Binding example -->
 <ul>
     <li>
-        <img src="{{src}}" alt="{{name}}" width="100px">
+        <img [src]="src" [alt]="name" width="100px">
         {{name}} by {{author}}
     </li>
     <li>
-        <img src="{{src_2}}" alt="{{name_2}}" width="100px">
+        <img [src]="src_2" [alt]="name_2" width="100px">
         {{name_2}} by {{author_2}}
     </li>
 </ul>

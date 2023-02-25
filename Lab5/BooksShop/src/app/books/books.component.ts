@@ -16,6 +16,8 @@ export class BooksComponent{
   author_2 : string = 'David Thomas';
 
 
+  isShowing : boolean = false;
+
 
 
 }

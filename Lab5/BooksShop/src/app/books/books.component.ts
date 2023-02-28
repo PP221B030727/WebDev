@@ -21,13 +21,22 @@ export class BooksComponent{
   myName  : String = '';
 
   handleClick() {  
-    alert("I am working!!! ")
-    this.isShowing = true 
+    // alert("I am working!!! ")
+    
+    if(this.isShowing){
+      this.isShowing = false
+    }
+    else{
+      this.isShowing = true 
+    }
   }
   handleInput(event : any){
     // alert("alsdef")
     // console.log(event)
     // console.log(event.target.value); 
     this.myName = event.target.value;
+  }
+  toggleBook(){
+    this.isShowing = !this.isShowing
   }
 }

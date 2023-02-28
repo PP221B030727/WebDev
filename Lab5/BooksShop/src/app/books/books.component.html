@@ -2,9 +2,20 @@
 
 <!--------------------------------------------------------------------------->
 <!-- Event Binding example -->
-<button (click)="handleClick()" (mouseover)="handleClick()"    [disabled]="isShowing">Show</button>
+<!-- <button (click)="handleClick()" (mouseover)="handleClick()"    [disabled]="isShowing">Show</button> -->
+<!--------------------------------------------------------------------------->
 
 <!--------------------------------------------------------------------------->
+<!-- Event Binding example -->
+<button (click)="toggleBook()">
+    <span *ngIf = "isShowing == false">Show Book</span>
+    <span *ngIf = "isShowing == true">Hide Book</span>
+</button>
+
+<!--------------------------------------------------------------------------->
+
+
+
 
 
 
@@ -19,8 +30,8 @@
 
 <!--------------------------------------------------------------------------->
 <!-- TWO Way binding -->
-<input  type = "text" [(ngModel)]="myName">
-<p>{{ myName }}</p> 
+<!-- <input  type = "text" [(ngModel)]="myName">
+<p>{{ myName }}</p>  -->
 <!--------------------------------------------------------------------------->
  
 
@@ -47,7 +58,7 @@
 
 
 <!-- Property Binding example -->
-<ul>
+<ul *ngIf = "isShowing">
     <li>
         <img [src]="src" [alt]="name" width="100px">
         {{name}} by {{author}}

@@ -19,5 +19,8 @@ export class BooksComponent{
   isShowing : boolean = false;
 
 
-
+  handleClick() {  
+    alert("I am working!!! ")
+    this.isShowing = true 
+  }
 }

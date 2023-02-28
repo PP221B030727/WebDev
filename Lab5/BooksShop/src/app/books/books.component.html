@@ -58,13 +58,15 @@
 
 
 <!-- Property Binding example -->
+
+<!-- *ngFor Example -->
+<!------------------------------------------------------------------------------------->
 <ul *ngIf = "isShowing">
-    <li>
-        <img [src]="src" [alt]="name" width="100px">
-        {{name}} by {{author}}
+    <li *ngFor="let book of books ; let i = index">
+        {{ i }}
+        <img [src]="book.src" [alt]="book.name" width="100px">
+        {{book.name}} by {{book.author}}
     </li>
-    <li>
-        <img [src]="src_2" [alt]="name_2" width="100px">
-        {{name_2}} by {{author_2}}
-    </li>
+    
 </ul>
+<!------------------------------------------------------------------------------------->

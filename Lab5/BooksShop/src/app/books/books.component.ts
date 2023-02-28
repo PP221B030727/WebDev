@@ -18,9 +18,16 @@ export class BooksComponent{
 
   isShowing : boolean = false;
 
+  myName  : String = '';
 
   handleClick() {  
     alert("I am working!!! ")
     this.isShowing = true 
+  }
+  handleInput(event : any){
+    // alert("alsdef")
+    // console.log(event)
+    // console.log(event.target.value); 
+    this.myName = event.target.value;
   }
 }

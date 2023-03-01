@@ -1,20 +1,11 @@
 <h2>Products</h2>
-<div class="xx">
-    <div *ngFor="let product of products" class="prod">
-        <img src = "{{product.image}}" alt="{{product.name}}" width="120px" height="120px">
-        <h3>
-            <a href="{{product.link}}" [title]="product.name + ' details'">
-                {{product.name}}
-            </a>
-        </h3>
-        <p *ngIf="product.description">
-            Description : {{product.description}}
-        </p>
-        <a href="https://web.telegram.org/z/">
-            <button  type="button" (click)="share()">Share</button>
-        </a>
-        <app-product-alerts [product]="product" (notify)="onNotify()">
-        </app-product-alerts>
-    </div>
-</div>
+<button type="button" (click)="onSelect('apple')">Apple</button>
+<button type="button" (click)="onSelect('samsung')"
+style="margin-left: 20px;">Samsung</button>
+<button type="button" (click)="onSelect('xiaomi')"
+style="margin-left: 20px;">Xiaomi</button>
+<button type="button" (click)="onSelect('huawei')"
+style="margin-left: 20px;">Huawei</button>
 
+
+<app-app-item [selectedProduct]="selectedProduct"></app-app-item>

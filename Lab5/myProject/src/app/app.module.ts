@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
+import { ProductItemComponent } from './product-item/product-item.component';
+import { AppItemComponent } from './app-item/app-item.component';
 
 @NgModule({
   imports: [
@@ -20,7 +22,9 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
     AppComponent,
     TopBarComponent,
     ProductListComponent,
-    ProductAlertsComponent
+    ProductAlertsComponent,
+    ProductItemComponent,
+    AppItemComponent
   ],
   bootstrap: [
     AppComponent

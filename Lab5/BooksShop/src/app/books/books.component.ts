@@ -63,4 +63,7 @@ export class BooksComponent{
   toggleBook(){
     this.isShowing = !this.isShowing
   }
+  addToCard(book : any){
+    console.log(book);
+  }
 }

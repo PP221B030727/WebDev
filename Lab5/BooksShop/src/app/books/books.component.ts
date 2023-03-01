@@ -27,6 +27,18 @@ export class BooksComponent{
       name : 'Pragmatic Programmer',
       author : 'David Thomas',
       amount : 412,
+    }  ,
+    {
+      src : 'https://miro.medium.com/max/362/0*C0krYKx7Ws9dSsPI.jpg',
+      name : 'Pragmatic Programmer',
+      author : 'David Thomas',
+      amount : 412,
+    }  ,
+    {
+      src : 'https://miro.medium.com/max/362/0*C0krYKx7Ws9dSsPI.jpg',
+      name : 'Pragmatic Programmer',
+      author : 'David Thomas',
+      amount : 412,
     }  
   ]
   

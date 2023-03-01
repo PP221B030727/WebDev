@@ -66,11 +66,11 @@
 <!------------------------------------------------------------------------------------->
 
 <ul *ngIf = "isShowing">
-    <li *ngFor="let book of books ; let i = index">
-        {{ i }}
+    <li *ngFor="let book of books ; let i = index" class = "book">
+        <p class = "snp">{{ i+1 }}</p>
         <img [src]="book.src" [alt]="book.name" width="100px">
-        {{book.name | titlecase }} by {{book.author | titlecase}}
-        <p>{{ book.amount | currency}}</p> 
+        <p class = "title">{{book.name | titlecase }} by {{book.author | titlecase}}</p>
+        <p class = "currency">{{ book.amount | currency}}</p> 
     </li>
     
 </ul>

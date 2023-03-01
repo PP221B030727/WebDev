@@ -68,12 +68,10 @@ export class BooksComponent implements OnInit{
     console.log(book);
   }
   constructor(){
-    console.log({constructor : 'constructor'});
 
   }
   ngOnInit(): void {
   
-      console.log({onInit : 'On - Init'});
 
   }
 }

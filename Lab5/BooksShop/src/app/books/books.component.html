@@ -7,10 +7,10 @@
 
 <!--------------------------------------------------------------------------->
 <!-- Event Binding example -->
-<button (click)="toggleBook()">
+<!-- <button (click)="toggleBook()">
     <span *ngIf = "isShowing == false">Show Book</span>
     <span *ngIf = "isShowing == true">Hide Book</span>
-</button>
+</button> -->
 
 <!--------------------------------------------------------------------------->
 
@@ -66,12 +66,10 @@
 <!------------------------------------------------------------------------------------->
 
 <ul *ngIf = "isShowing">
-    <li *ngFor="let book of books ; let i = index" class = "book">
-        <p class = "snp">{{ i+1 }}</p>
-        <img [src]="book.src" [alt]="book.name" width="100px">
-        <p class = "title">{{book.name | titlecase }} by {{book.author | titlecase}}</p>
-        <p class = "currency">{{ book.amount | currency}}</p> 
-    </li>
+    <ng-container *ngFor="let SingleBook of books ; let i = index">
+        <app-book [book] = "SingleBook"></app-book>
+    </ng-container> 
+    
     
 </ul>
 <!------------------------------------------------------------------------------------->

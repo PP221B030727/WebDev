@@ -1,12 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-
-interface Book {
-  src : string,
-  name : string,
-  author : string
-  amount : number,
-}
+import { Book } from '../types/Book';
 
 
 @Component({
@@ -47,7 +40,7 @@ export class BooksComponent{
   
 
 
-  isShowing : boolean = false;
+  isShowing : boolean = true;
 
   myName  : String = '';
 

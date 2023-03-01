@@ -7,10 +7,10 @@
 
 <!--------------------------------------------------------------------------->
 <!-- Event Binding example -->
-<!-- <button (click)="toggleBook()">
+<button (click)="toggleBook()">
     <span *ngIf = "isShowing == false">Show Book</span>
     <span *ngIf = "isShowing == true">Hide Book</span>
-</button> -->
+</button>
 
 <!--------------------------------------------------------------------------->
 
@@ -64,6 +64,10 @@
 
 <!-- Pipes example -->
 <!------------------------------------------------------------------------------------->
+
+
+<!-- <button (lcick) = "isShowing=!isShowing" >Toggle</button> -->
+
 
 <ul *ngIf = "isShowing">
     <ng-container *ngFor="let SingleBook of books ; let i = index">

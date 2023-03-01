@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Book } from '../types/Book';
 
 
@@ -7,7 +7,8 @@ import { Book } from '../types/Book';
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.scss']
 })
-export class BooksComponent{
+export class BooksComponent implements OnInit{
+ 
   books : Book[] = [
     {
       src : 'https://m.media-amazon.com/images/I/41xShlnTZTL.jpg', // ссылка на фото
@@ -65,5 +66,14 @@ export class BooksComponent{
   }
   addToCard(book : any){
     console.log(book);
+  }
+  constructor(){
+    console.log({constructor : 'constructor'});
+
+  }
+  ngOnInit(): void {
+  
+      console.log({onInit : 'On - Init'});
+
   }
 }

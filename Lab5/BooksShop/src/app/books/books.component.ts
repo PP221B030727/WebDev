@@ -1,5 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Book } from '../types/Book';
+import { BooksService } from './books.service';
 
 
 @Component({
@@ -8,33 +9,11 @@ import { Book } from '../types/Book';
   styleUrls: ['./books.component.scss']
 })
 export class BooksComponent implements OnInit{
- 
-  books : Book[] = [
-    {
-      src : 'https://m.media-amazon.com/images/I/41xShlnTZTL.jpg', // ссылка на фото
-      name : 'Clean Code',//Добавляем елемент имя
-      author : 'Robert C Martin', // Доьавляем елемент автор
-      amount : 200 , 
-    },
-    {
-      src : 'https://miro.medium.com/max/362/0*C0krYKx7Ws9dSsPI.jpg',
-      name : 'Pragmatic Programmer',
-      author : 'David Thomas',
-      amount : 412,
-    }  ,
-    {
-      src : 'https://miro.medium.com/max/362/0*C0krYKx7Ws9dSsPI.jpg',
-      name : 'Pragmatic Programmer',
-      author : 'David Thomas',
-      amount : 412,
-    }  ,
-    {
-      src : 'https://miro.medium.com/max/362/0*C0krYKx7Ws9dSsPI.jpg',
-      name : 'Pragmatic Programmer',
-      author : 'David Thomas',
-      amount : 412,
-    }  
-  ]
+  constructor(private booksService : BooksService) {
+    this.books = this.booksService.getBook(); // Достаем книги из ангуляра Dependensi injection
+  }
+  //компонент берет книги из сервиса и он только может взять 
+  books : Book[] = [];
   
 
   card : Book[] = [];
@@ -67,9 +46,7 @@ export class BooksComponent implements OnInit{
   addToCard(book : any){
     console.log(book);
   }
-  constructor(){
-
-  }
+  
   ngOnInit(): void {
   
 

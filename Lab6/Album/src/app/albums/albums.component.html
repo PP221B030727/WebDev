@@ -1,0 +1,14 @@
+<h1>My Albums</h1>
+
+<div class = "inpt">
+    <input type="text" [(ngModel)] = "setSearchTerm">
+    <!-- <button (click)="setSearchTerm()">search</button> -->
+</div>
+
+<div *ngIf="isShow" class = "g">    
+    <div *ngFor="let album of albumsFil" class = "x1">
+        <div class = "x2">
+            <p>{{ album.title }}</p>
+        </div>
+    </div>
+</div>

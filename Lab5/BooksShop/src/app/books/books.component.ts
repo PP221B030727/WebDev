@@ -46,9 +46,9 @@ export class BooksComponent implements OnInit{
   toggleBook(){
     this.isShowing = !this.isShowing
   }
-  addToCard(book : any){
-    console.log(book);
-  }
+  // addToCard(book : any){
+  //   console.log(book);
+  // }
   
   ngOnInit(): void {
   

@@ -9,6 +9,9 @@ import { BooksService } from './books.service';
   styleUrls: ['./books.component.scss']
 })
 export class BooksComponent implements OnInit{
+  private bookService = new BooksService();
+
+
   constructor(private booksService : BooksService) {
     this.books = this.booksService.getBook(); // Достаем книги из ангуляра Dependensi injection
   }

@@ -1,6 +1,6 @@
 import { Component , EventEmitter, Input, Output , OnInit , OnDestroy } from '@angular/core';
 import { interval } from 'rxjs';
-import { Book } from '../types/Book';
+import { Book } from '../../types/Book';
 
 @Component({
   selector: 'app-book',

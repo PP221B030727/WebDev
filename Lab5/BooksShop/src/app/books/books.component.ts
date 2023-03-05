@@ -17,7 +17,7 @@ export class BooksComponent implements OnInit{
   }
   //компонент берет книги из сервиса и он только может взять 
   books : Book[] = [];
-  
+   
 
   card : Book[] = [];
   

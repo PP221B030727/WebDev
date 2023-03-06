@@ -7,9 +7,9 @@
 <div *ngIf="isShow" class = "g">    
     <div *ngFor="let album of albumsFil" class = "x1">
         <div class = "x2">
-            <a>{{ album.title }}</a>
+            <a routerLink="photos">{{album.title}}</a>
         </div>
     </div>
 </div>
 
-<app-album-photos></app-album-photos>
+<!-- <app-album-photos></app-album-photos> -->

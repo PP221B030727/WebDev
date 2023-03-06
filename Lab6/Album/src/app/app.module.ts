@@ -7,8 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { FormsModule } from '@angular/forms';
-// import { AlbumPhotosComponent } from './albums/album-photos/album-photos.component';
-// import { AlbumDetailsComponent } from './albums/album-details/album-details.component';
+import { AlbumPhotosComponent } from './albums/album-photos/album-photos.component';
+import { AlbumDetailsComponent } from './albums/album-details/album-details.component';
 
 
 @NgModule({
@@ -17,8 +17,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AboutComponent,
     AlbumsComponent,
-    // AlbumPhotosComponent,
-    // AlbumDetailsComponent,
+    AlbumPhotosComponent,
+    AlbumDetailsComponent,
 
   ],
   imports: [

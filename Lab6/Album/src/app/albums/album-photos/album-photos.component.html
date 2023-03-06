@@ -1,1 +1,14 @@
-<p>album-photos works!</p>
+<h1>Album</h1>
+
+<div class = "inpt">
+    <input type="text" [(ngModel)] = "setSearchTerm">
+</div>
+
+<div class = "g">    
+    <div *ngFor="let photo of photosFil" class = "x1">
+        <div class = "x2">
+            <p>{{ photo.title }}</p>
+            <img src = "{{ photo.thumbnailUrl }}">
+        </div>
+    </div>
+</div>

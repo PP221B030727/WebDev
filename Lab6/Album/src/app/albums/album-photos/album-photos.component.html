@@ -1,5 +1,10 @@
-<h1>Album {{id}}</h1>
-<a routerLink="/albums">back</a>
+<nav>
+    <a routerLink="/albums" class="back-button">&#8592; Back</a>
+    <h1>Album {{id}}</h1>
+</nav>
+
+
+
 <div class = "inpt">
     <input type="text" [(ngModel)] = "setSearchTerm">
 </div>

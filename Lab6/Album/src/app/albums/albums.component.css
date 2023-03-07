@@ -1,6 +1,6 @@
 /* стиль для контейнера с альбомами */
 
-h1{
+/* h1{
     color: rgb(209, 202, 202);
     justify-content: space-between;
     padding: 0 20px;
@@ -8,6 +8,14 @@ h1{
     background-color: #120d0d; 
     font-family: sans-serif ;
     height: 50px;
+} */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .inpt {
     display: flex;
@@ -74,3 +82,18 @@ h1{
     transform: translateY(-5px);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   }
+
+
+  .back-button {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    text-decoration: none;
+  }
+  
+  .back-button:hover {
+    text-decoration: underline;
+  }
+  

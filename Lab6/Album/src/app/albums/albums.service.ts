@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AlbumsService {
-
+  urlAlbums : string = "https://jsonplaceholder.typicode.com/albums";
   constructor() { }
   getAlbums(){
     return [

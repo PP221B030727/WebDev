@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , Input } from '@angular/core';
 import { album } from '../types/album';
 import { AlbumsService } from './albums.service';
 @Component({
@@ -8,19 +8,27 @@ import { AlbumsService } from './albums.service';
 })
 
 export class AlbumsComponent{
+  
+
+
   albumsInfo : album[] = [];
   private albumsService = new AlbumsService();
   isShow : boolean = true;
   lst : string = "";
   constructor(private album : AlbumsService) {
     this.albumsInfo = album.getAlbums();
+    // this.albumsInfo = album.getAlbums();
+    
   }
   
   
   albumsFil : album[] = this.albumsInfo;
 
 
-
+  strtoInt(x:string){
+    console.log(parseInt(x)+1);
+    return parseInt(x);
+  }
 
 
   getAlbumsInfo(){

@@ -1,6 +1,7 @@
 export interface album {
     userId : number,
-    id : number,
+    id : string,
+    idtoInt:number,
     title : string,
 }
   

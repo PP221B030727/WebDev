@@ -9,9 +9,8 @@ const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'about',component:AboutComponent},
   {path:'albums',component:AlbumsComponent},
-  {path: 'albums/photos', component:AlbumPhotosComponent}
-  // {path: 'albums/:albumId', component: AlbumPhotosComponent },
-  // {path: 'albums/album/:albumId', component: AlbumPhotosComponent }
+  {path: 'albums/:albumId', component:AlbumPhotosComponent},
+  // {path: 'albums/:photos', component:AlbumPhotosComponent},
 ];
 
 @NgModule({

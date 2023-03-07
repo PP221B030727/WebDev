@@ -1,15 +1,15 @@
-<h1>My Albums</h1>
 
+<h1>My Albums</h1>
+<a routerLink="">home</a>
 <div class = "inpt">
     <input type="text" [(ngModel)] = "setSearchTerm">
 </div>
 
 <div *ngIf="isShow" class = "g">    
-    <div *ngFor="let album of albumsFil" class = "x1">
-        <div class = "x2">
-            <a routerLink="photos">{{album.title}}</a>
-        </div>
-    </div>
+    <ng-container *ngFor="let SingleBook of albumsFil ; let i = index">
+        <a [routerLink]="[SingleBook.id]" >
+            {{SingleBook.title}}
+        </a>
+    </ng-container> 
 </div>
 
-<!-- <app-album-photos></app-album-photos> -->

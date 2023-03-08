@@ -1,4 +1,4 @@
-<nav>
+<!-- <nav>
     <a href="#" class="back-button">&#8592; Back</a>
     <h1>My Albums</h1>
     
@@ -13,6 +13,60 @@
         <a [routerLink]="[SingleBook.id]" >
             {{SingleBook.title}}
         </a>
+        <button id="remove" (click)="removeAlbum(SingleBook.id)">Remove</button>
     </ng-container> 
+    
 </div>
+ -->
 
+<!-- 
+
+
+ <nav class="nav-bar">
+    <a href="#" class="back-button">
+      <i class="fas fa-chevron-left"></i>
+      Back
+    </a>
+    <h1>My Albums</h1>
+  </nav>
+  
+  <div class="search-bar">
+    <input type="text" [(ngModel)]="setSearchTerm" placeholder="Search Albums">
+  </div>
+  
+  <div *ngIf="isShow" class="album-list">
+    <ng-container *ngFor="let SingleBook of albumsFil; let i = index">
+      <div class="album-card">
+        <a [routerLink]="[SingleBook.id]" class="album-link">
+          <div class="album-title">{{ SingleBook.title }}</div>
+        </a>
+        <button id="remove" (click)="removeAlbum(SingleBook.id)" class="remove-button">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </ng-container>
+  </div> -->
+
+
+
+  <div class="container">
+    <nav>
+      <a href="#" class="back-button">&#8592; Back</a>
+      <h1>My Albums</h1>
+    </nav>
+  
+    <div class="search-container">
+      <input type="text" [(ngModel)]="setSearchTerm" placeholder="Search...">
+    </div>
+  
+    <div *ngIf="isShow" class="album-container">    
+      <ng-container *ngFor="let SingleBook of albumsFil ; let i = index">
+        <div class="album">
+          <a [routerLink]="[SingleBook.id]" >
+            <div class="album-title">{{SingleBook.title}}</div>
+          </a>
+          <button id="remove" (click)="removeAlbum(SingleBook.id)">Remove</button>
+        </div>
+      </ng-container>
+    </div>
+  </div>

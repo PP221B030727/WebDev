@@ -12,9 +12,11 @@ export class AlbumsComponent implements OnInit{
   albumsInfo : album[];
   isShow : boolean = true;
   lst : string = "";
+  newAlbum : album;
   constructor(private albumServ : AlbumService) {
       this.albumsInfo = [];
       this.albumsFil = [];
+      this.newAlbum = {} as album;
   }
   set setSearchTerm(value: string) {
     this.lst = value;
@@ -28,5 +30,17 @@ export class AlbumsComponent implements OnInit{
   }
   filterAlbums(searchString: string) {
     return this.albumsInfo.filter(album =>album.title.toLowerCase().indexOf(searchString.toLowerCase()) !== -1);
+  }
+  removeAlbum(id: number){
+    this.albumsFil = this.albumsFil.filter((x) => x.id !== id);
+  }
+  addAlbum(){
+    if(this.newAlbum.title.length == 0 || this.newAlbum.id <= this.albumsInfo[this.albumsInfo.length-1].id){
+      return;
+    }
+    this.newAlbum.userId = this.albumsInfo[0].userId;
+    this.albumServ.addAlbum(this.newAlbum).subscribe((album) =>{
+      this.albumsInfo.unshift(album);
+    })
   }
 }

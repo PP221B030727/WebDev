@@ -33,6 +33,7 @@ export class AlbumsComponent implements OnInit{
   }
   removeAlbum(id: number){
     this.albumsFil = this.albumsFil.filter((x) => x.id !== id);
+    this.albumsInfo = this.albumsInfo.filter((x) => x.id !== id);
   }
   addAlbum(){
     if(this.newAlbum.title.length == 0 || this.newAlbum.id <= this.albumsInfo[this.albumsInfo.length-1].id){

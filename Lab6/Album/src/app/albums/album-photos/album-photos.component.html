@@ -2,13 +2,9 @@
     <a routerLink="/albums" class="back-button">&#8592; Back</a>
     <h1>Album {{id}}</h1>
 </nav>
-
-
-
 <div class = "inpt">
     <input type="text" [(ngModel)] = "setSearchTerm">
 </div>
-
 <div class = "g">    
     <div *ngFor="let photo of photosFil" class = "x1">
         <div class = "x2">

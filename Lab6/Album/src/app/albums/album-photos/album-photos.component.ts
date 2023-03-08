@@ -9,14 +9,17 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./album-photos.component.css']
 })
 export class AlbumPhotosComponent {
-  photos : photo[] = [];
-  photosFil : photo[] = [];  
-  id : string | null = null ;
+  photos ;
+  photosFil ;
+  id ;
   
   constructor(private route: ActivatedRoute , private Photos : AlbumsPhotosService) {
     this.id = this.route.snapshot.paramMap.get('albumId');
     this.photos = Photos.getAlbumsPhotos(this.id);
     this.photosFil = this.photos;
+    this.photos = Photos.photos;
+    this.photosFil = Photos.photosFil;
+    this.id = Photos.id;
     
   }  
 

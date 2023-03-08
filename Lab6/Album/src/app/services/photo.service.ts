@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 import { album } from 'src/app/types/album';
+import { photo } from '../types/photos';
 @Injectable({
   providedIn: 'root'
 })
 export class AlbumsPhotosService {
-
+  photos : photo[] = [];
+  photosFil : photo[] = [];  
+  id : string | null = null ;
   constructor() { }
   getAlbumsPhotos(albumIds: string | null){
     

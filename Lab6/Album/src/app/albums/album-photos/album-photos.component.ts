@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { photo } from 'src/app/types/photos';
-import { AlbumsPhotosService } from './album-photos.service';
+import { AlbumsPhotosService } from 'src/app/services/photo.service';
 import { album } from 'src/app/types/album';
 import { ActivatedRoute } from '@angular/router';
 @Component({

@@ -52,11 +52,21 @@
   <div class="container">
     <nav>
       <a href="#" class="back-button">&#8592; Back</a>
+
+      <div class="add-post">
+        <input [(ngModel)]="newAlbum.title" id="title" class="add-post__input" required>
+        <button (click)="addAlbum()" class="add-post__button">Add</button>
+      </div>
+
       <h1>My Albums</h1>
     </nav>
-    <!-- <label for="title">Title : </label> -->
-    <!-- <input [(ngModel)]="newAlbum.title" id="title" required> -->
+    
+    
+    
   
+    
+
+
     <div class="search-container">
       <input type="text" [(ngModel)]="setSearchTerm" placeholder="Search...">
     </div>

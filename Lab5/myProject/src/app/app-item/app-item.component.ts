@@ -23,7 +23,7 @@ for(let i=0; i<products.length; i++){
 }
 
   share(link:string|URL|undefined) {
-    window.open("https://t.me/+bX-kLs47TXVkZThi/" + link,'menubar=off, toolbar=off');
+    window.open("https://web.telegram.org/k/" + link,'menubar=off, toolbar=off');
   }
   kaspi(a:string|URL|undefined) {
     window.open("https://kaspi.kz/shop/c/smartphones/"+a);

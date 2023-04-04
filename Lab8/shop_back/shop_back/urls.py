@@ -24,5 +24,6 @@ urlpatterns = [
     path('api/products/', products),
     path('api/categories/', categories),
     path('api/products/<int:id>/', get_product),
-    path('api/categories/<int:id>/', get_category)
+    path('api/categories/<int:id>/', get_category) ,
+    path('api/categories/<int:id>/products/', get_products_by_category),
 ]

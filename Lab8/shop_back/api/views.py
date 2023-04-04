@@ -14,8 +14,11 @@ def products(request):
     return JsonResponse(products_json, safe=False)
 
 def categories(request):
-    cate = Category.objects.all()
-    categories_json = [c.to_json() for c in cate]
+    try:
+        cate = Category.objects.all()
+        categories_json = [c.to_json() for c in cate]
+    except:
+        categories_json = []
     return JsonResponse(categories_json, safe=False)
 
 def get_product(request,id):
@@ -33,3 +36,12 @@ def get_category(request,id):
     except:
         category_json = []
     return JsonResponse(category_json, safe=False)
+
+def get_products_by_category(request,id):
+    try:
+        cate = Category.objects.get(id=id)
+        products = Product.objects.filter(category=cate)
+        products_json = [p.to_json() for p in products]
+    except:
+        products_json = []
+    return JsonResponse(products_json, safe=False)

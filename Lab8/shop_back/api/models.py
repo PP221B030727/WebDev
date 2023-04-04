@@ -5,8 +5,11 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField(max_length=128)
-    def __str__(self):
-        return self.name
+    def to_json(self):
+        return {
+            'id': self.id,
+            'name': self.name
+        }
 
 class Product(models.Model):
     name = models.CharField(max_length=256)
@@ -16,3 +19,14 @@ class Product(models.Model):
     image = models.ImageField(upload_to='product_images')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     is_active = models.BooleanField(default=True)
+
+    def to_json(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'price': self.price,
+            'count': self.count,
+            'image': self.image,
+            'category': self.category.name,
+            'is_active': self.is_active
+        }

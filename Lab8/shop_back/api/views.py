@@ -18,13 +18,18 @@ def categories(request):
     categories_json = [c.to_json() for c in cate]
     return JsonResponse(categories_json, safe=False)
 
-def get_product(request, id):
-    prod = Product.objects.get(id=id)
-    product_json = prod.to_json()
+def get_product(request,id):
+    try:
+        prod = Product.objects.get(id=id)
+        product_json = prod.to_json()
+    except:
+        product_json = []
     return JsonResponse(product_json, safe=False)
 
-def get_category(request, id):
-    cate = Category.objects.get(id=id)
-    category_json = cate.to_json()
+def get_category(request,id):
+    try:
+        cate = Category.objects.get(id=id)
+        category_json = cate.to_json()
+    except:
+        category_json = []
     return JsonResponse(category_json, safe=False)
-

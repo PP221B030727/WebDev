@@ -25,4 +25,5 @@ urlpatterns = [
     path('api/companies/<int:id>', get_company),
     path('api/vacancies/<int:id>', get_vacancy),
     path('api/companies/<int:id>/vacancies' , get_vacancy_by_company),
+    path('api/vacancies/top_ten/', top_ten)
 ]

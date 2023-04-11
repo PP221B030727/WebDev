@@ -46,3 +46,13 @@ def get_vacancy_by_company(request, id):
         vacancies_json = []
     return JsonResponse(vacancies_json, safe=False)
 
+
+def top_ten(request):
+    try:
+        vacancies = Vacancy.objects.all().order_by('-salary')[:10]
+        vacancies_json = [i.to_json() for i in vacancies]
+    except:
+        vacancies_json = []
+    return JsonResponse(vacancies_json, safe=False)
+
+

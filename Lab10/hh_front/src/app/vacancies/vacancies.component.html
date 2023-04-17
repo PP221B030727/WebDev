@@ -1,0 +1,28 @@
+<p>vacancies works!</p>
+
+
+
+<fieldset>
+  <label>Vacancy name: </label>
+  <input type="text" [(ngModel)]="newVacancy"><br>
+  <label>Vacancy description: </label>
+  <input type="text" [(ngModel)]="vacancyDescription"><br>
+  <label>Vacancy salary: </label>
+  <input type="text" [(ngModel)]="vacancySalary"><br>
+  <label>Vacancy name of company : </label>
+  <input type="text" [(ngModel)]="companyName"><br>
+  <button (click)="addVacancy()">Add Vacancy</button>
+</fieldset>
+
+
+<ul>
+  <li *ngFor = "let vacancy of vacancies">
+    <p>{{ vacancy.id }}</p>
+    <p>{{ vacancy.name }}</p>
+    <button [routerLink]="[vacancy.id]">Update</button>
+    <button routerLink="/vacancies" (click) = "deleteVacancy(vacancy.id)" >Delete</button>
+<!--    <p>{{ vacancy.salary }}</p>-->
+<!--    <p>{{ vacancy.description }}</p>-->
+<!--    <p>{{ vacancy.company.name }}</p>-->
+  </li>
+</ul>

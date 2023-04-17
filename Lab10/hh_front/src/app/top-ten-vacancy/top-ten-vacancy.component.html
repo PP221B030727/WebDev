@@ -1,0 +1,12 @@
+<p>top-ten-Vacancies: </p>
+
+
+<ul>
+  <li *ngFor="let vacany of topTenVacancies">
+    {{ vacany.id }}<br>
+    {{ vacany.name }}<br>
+    {{ vacany.description }}<br>
+    {{ vacany.salary }}<br>
+    {{ vacany.company.name }}<br>
+  </li>
+</ul>

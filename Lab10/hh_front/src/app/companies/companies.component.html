@@ -1,0 +1,31 @@
+<p>companies works!</p>
+
+
+
+
+<fieldset>
+  <label>Company name: </label>
+  <input type="text" [(ngModel)]="newCompanyName"><br>
+  <label>Company Description: </label>
+  <input type="text" [(ngModel)]="newCompanyDescription"><br>
+  <label>Company City: </label>
+  <input type="text" [(ngModel)]="newCompanyCity"><br>
+  <label>Company Address: </label>
+  <input type="text" [(ngModel)]="newCompanyAddress"><br>
+  <label>Adding: </label>
+  <button (click)="addCompany()">Add Company</button>
+</fieldset>
+
+
+<ul>
+  <li *ngFor = "let company of companies">
+    {{ company.id }}
+    {{ company.name }}
+<!--    {{ company.description }}-->
+<!--    {{ company.address}}-->
+<!--    {{ company.city }}-->
+
+    <button [routerLink]="[company.id]">Update</button>
+    <button (click) = "deleteCompany(company.id)" routerLink="/companies">Delete</button>
+  </li>
+</ul>

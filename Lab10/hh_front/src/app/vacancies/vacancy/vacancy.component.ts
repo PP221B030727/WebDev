@@ -11,13 +11,23 @@ import {Vacancy} from "../../models";
 export class VacancyComponent implements OnInit{
   id: string = '';
   vacancy : Vacancy|null = null;
+
+  newName : string = '';
+  newDesc : string = '';
+  newSalary : string = '';
   constructor(private route: ActivatedRoute , private vacancyService : VacancyService) {
+
   }
   ngOnInit(): void {
     this.id = this.route.snapshot.params['vacancyId'];
-    this.vacancyService.getCompany(this.id).subscribe((vacancy)=>{
+    this.vacancyService.getVacancy(this.id).subscribe((vacancy)=>{
       this.vacancy = vacancy;
     });
+  }
+  updateVacancy(){
+    this.vacancyService.updateVacancy(parseInt(this.id) , this.newName , this.newDesc , this.newSalary).subscribe((data)=>{
+      this.vacancy = data
+    })
   }
 
 

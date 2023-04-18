@@ -19,7 +19,7 @@
   <li *ngFor = "let vacancy of vacancies">
     <p>{{ vacancy.id }}</p>
     <p>{{ vacancy.name }}</p>
-    <button [routerLink]="[vacancy.id]">Update</button>
+    <button [routerLink]="[vacancy.id]">Detail</button>
     <button routerLink="/vacancies" (click) = "deleteVacancy(vacancy.id)" >Delete</button>
 <!--    <p>{{ vacancy.salary }}</p>-->
 <!--    <p>{{ vacancy.description }}</p>-->

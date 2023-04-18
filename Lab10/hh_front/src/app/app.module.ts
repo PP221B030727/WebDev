@@ -10,6 +10,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { TopTenVacancyComponent } from './top-ten-vacancy/top-ten-vacancy.component';
 import { CompanyComponent } from './companies/company/company.component';
 import { VacancyComponent } from './vacancies/vacancy/vacancy.component';
+import { CompanyVacanciesComponent } from './companies/company/company-vacancies/company-vacancies.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { VacancyComponent } from './vacancies/vacancy/vacancy.component';
     CompaniesComponent,
     TopTenVacancyComponent,
     CompanyComponent,
-    VacancyComponent
+    VacancyComponent,
+    CompanyVacanciesComponent
   ],
   imports: [
     BrowserModule,

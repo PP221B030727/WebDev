@@ -69,9 +69,6 @@ def vacancies(request):
 
 @csrf_exempt
 def get_company(request , id):
-    print(id)
-    print(request.method)
-
     company = Company.objects.get(id=id)
     company_json = company.to_json()
 
@@ -80,6 +77,21 @@ def get_company(request , id):
     if(request.method == 'DELETE'):
         company.delete()
         return JsonResponse({'deleted': True})
+
+    if request.method == 'PUT':
+        data = json.loads(request.body)
+
+
+        company.name = data.get('name', '')
+        company.description = data.get('description', '')
+        company.city = data.get('city', '')
+        company.address = data.get('address', '')
+
+        company.save()
+        vacancy_json = company.to_json()
+        return JsonResponse(vacancy_json, safe=False)
+
+
 
 
 
@@ -92,9 +104,18 @@ def get_vacancy(request, id):
     if(request.method=='DELETE'):
         vacancy.delete()
         return JsonResponse({'deleted': True})
+    if request.method == 'PUT':
+        data = json.loads(request.body)
+        vacancy.name = data.get('name', '')
+        vacancy.description = data.get('description', '')
+        vacancy.salary = data.get('salary', '')
+
+        vacancy.save()
+        vacancy_json = vacancy.to_json()
+        return JsonResponse(vacancy_json, safe=False)
 
 
-
+@csrf_exempt
 def get_vacancy_by_company(request, id):
     try:
         company = Company.objects.get(id=id)
@@ -104,7 +125,7 @@ def get_vacancy_by_company(request, id):
         vacancies_json = []
     return JsonResponse(vacancies_json, safe=False)
 
-
+@csrf_exempt
 def top_ten(request):
     try:
         vacancies = Vacancy.objects.all().order_by('-salary')[:10]

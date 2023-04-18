@@ -6,6 +6,7 @@ import {VacanciesComponent} from "./vacancies/vacancies.component";
 import {TopTenVacancyComponent} from "./top-ten-vacancy/top-ten-vacancy.component";
 import {CompanyComponent} from "./companies/company/company.component";
 import {VacancyComponent} from "./vacancies/vacancy/vacancy.component";
+import {CompanyVacanciesComponent} from "./companies/company/company-vacancies/company-vacancies.component";
 
 
 
@@ -15,7 +16,8 @@ const routes : Routes = [
   {path:'vacancies',component:VacanciesComponent},
   {path:'top_ten', component:TopTenVacancyComponent},
   {path:'companies/:companyId',component:CompanyComponent},
-  {path:'vacancies/:vacancyId', component:VacancyComponent}
+  {path:'vacancies/:vacancyId', component:VacancyComponent},
+  {path:'companies/:companyId/vacancies' , component:CompanyVacanciesComponent}
 
 ];
 @NgModule({

@@ -9,6 +9,9 @@ import json
 
 from api.serializers import CompanySerializer , VacancySerializer
 
+from rest_framework.response import Response
+
+
 
 def index(request):
     return HttpResponse("<h1>Api</h1>")

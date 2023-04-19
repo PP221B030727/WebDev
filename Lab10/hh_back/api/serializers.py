@@ -14,6 +14,9 @@ class CompanySerializer(serializers.Serializer):
     address = serializers.CharField()
 
 
+
+
+
 class VacancySerializer(serializers.Serializer):
     id = serializers.IntegerField()
     name = serializers.CharField()

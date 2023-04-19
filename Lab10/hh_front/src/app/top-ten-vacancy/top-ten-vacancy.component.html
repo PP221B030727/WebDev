@@ -2,11 +2,11 @@
 
 
 <ul>
-  <li *ngFor="let vacany of topTenVacancies">
-    {{ vacany.id }}<br>
-    {{ vacany.name }}<br>
-    {{ vacany.description }}<br>
-    {{ vacany.salary }}<br>
-    {{ vacany.company.name }}<br>
+  <li *ngFor="let vacancy of topTenVacancies">
+    {{ vacancy.id }}<br>
+    name of Vacancy : {{ vacancy.name }}<br>
+<!--    name of Company : {{ vacancy.company.id }}<br>-->
+    salary : {{ vacancy.salary }}$<br>
+    description : {{ vacancy.description }}<br>
   </li>
 </ul>

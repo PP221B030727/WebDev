@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 
-
+from api.serializers import CompanySerializer , VacancySerializer
 
 
 def index(request):
@@ -16,11 +16,15 @@ def index(request):
 
 @csrf_exempt
 def companies(request):
-    companies = Company.objects.all()
-    companies_json = [i.to_json() for i in companies]
+
+    # companies_json = [i.to_json() for i in companies]
 
     if(request.method == 'GET'):
-        return JsonResponse(companies_json, safe=False)
+        companies = Company.objects.all()
+        serializer = CompanySerializer(companies, many=True)
+        return JsonResponse(serializer.data, safe=False)
+
+
 
     if(request.method == 'POST'):
         data = json.loads(request.body)
@@ -41,9 +45,10 @@ def companies(request):
 @csrf_exempt
 def vacancies(request):
     vacancies = Vacancy.objects.all()
-    vacancies_json = [i.to_json() for i in vacancies]
+    # vacancies_json = [i.to_json() for i in vacancies]
     if(request.method == 'GET'):
-        return JsonResponse(vacancies_json, safe=False)
+        serializer = VacancySerializer(vacancies, many=True)
+        return JsonResponse(serializer.data, safe=False)
     if(request.method == 'POST'):
         data = json.loads(request.body)
         vacancies_name = data.get('name' , '')
@@ -127,11 +132,11 @@ def get_vacancy_by_company(request, id):
 
 @csrf_exempt
 def top_ten(request):
-    try:
-        vacancies = Vacancy.objects.all().order_by('-salary')[:10]
-        vacancies_json = [i.to_json() for i in vacancies]
-    except:
-        vacancies_json = []
-    return JsonResponse(vacancies_json, safe=False)
+    vacancies = Vacancy.objects.all().order_by('-salary')[:10]
+    for i in vacancies:
+        print(i.to_json())
+    serializer = VacancySerializer(vacancies, many=True)
+    return JsonResponse(serializer.data, safe=False)
+
 
 

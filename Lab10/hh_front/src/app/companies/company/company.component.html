@@ -19,10 +19,12 @@
 
 <ul>
   <li *ngIf="company!=null">
-    {{ company.name }}
-    {{ company.description }}
-    {{ company.city }}
-    {{ company.address }}
+    <h2>Company name : {{ company.name }} </h2>
+
+    <h2>Company Info : </h2>
+    description : {{ company.description }}<br>
+    city : {{ company.city }}<br>
+    address : {{ company.address }}<br><br>
     <button routerLink="/companies/{{company.id}}/vacancies">Vacancies</button>
   </li>
 </ul>

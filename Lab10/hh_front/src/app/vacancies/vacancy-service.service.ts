@@ -16,6 +16,9 @@ export class VacancyServiceService {
       `${this.BASE_URL}/api/vacancies`
     )
   }
+
+
+
   createVacancy(
     name : string ,
     description : string ,

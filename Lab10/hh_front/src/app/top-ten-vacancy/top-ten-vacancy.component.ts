@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { Vacancy} from "../models";
 import {TopTenService} from "./top-ten.service";
+import {Company} from "../models";
 
 @Component({
   selector: 'app-top-ten-vacancy',
@@ -9,6 +10,7 @@ import {TopTenService} from "./top-ten.service";
 })
 export class TopTenVacancyComponent implements OnInit {
   topTenVacancies : Vacancy[] = [];
+  topTenVacanciesComp : Company[] = [];
 
   constructor(private service : TopTenService) { }
 
@@ -17,5 +19,9 @@ export class TopTenVacancyComponent implements OnInit {
       this.topTenVacancies = vacancies;
       console.log(this.topTenVacancies);
     });
+  }
+
+  getCompanyForId(id : number){
+
   }
 }

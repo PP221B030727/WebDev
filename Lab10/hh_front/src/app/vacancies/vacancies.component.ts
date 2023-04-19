@@ -40,6 +40,10 @@ export class VacanciesComponent implements OnInit{
     }
     return null;
   }
+
+
+
+
   addVacancy(){
     this.vacancyCompany = this.getCompany(this.companyName)
     this.vacancyService.createVacancy(
